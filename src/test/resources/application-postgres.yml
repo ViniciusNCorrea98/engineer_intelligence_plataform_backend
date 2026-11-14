@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: ${EIP_DATABASE_URL}
+    username: ${EIP_DATABASE_USERNAME}
+    password: ${EIP_DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate

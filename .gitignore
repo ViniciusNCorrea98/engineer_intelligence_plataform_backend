@@ -1,0 +1,63 @@
+# Java and Maven build output
+target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+replay_pid*
+
+# Test and coverage reports generated locally
+surefire-reports/
+failsafe-reports/
+test-output/
+coverage/
+*.exec
+
+# Spring Boot and local runtime output
+*.log
+logs/
+*.pid
+*.hprof
+*.dump
+
+# Environment files and local credentials (keep safe examples versioned)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Local Docker/PostgreSQL state and backups
+postgres-data/
+pgdata/
+docker-data/
+*.sql.gz
+*.dump
+*.backup
+
+# Local workspace and IDE files
+.tmp/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.iml
+*.ipr
+*.iws
+
+# Operating system and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

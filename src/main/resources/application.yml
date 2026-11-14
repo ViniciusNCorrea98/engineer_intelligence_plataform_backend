@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eip
+  datasource:
+    url: ${EIP_DATABASE_URL:jdbc:postgresql://localhost:5433/eip}
+    username: ${EIP_DATABASE_USERNAME:eip}
+    password: ${EIP_DATABASE_PASSWORD:eip}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+server:
+  error:
+    include-message: never
+
+eip:
+  human-session:
+    ttl-hours: ${EIP_HUMAN_SESSION_TTL_HOURS:8}
+    # Local HTTP uses false; HTTPS deployments must set EIP_HUMAN_SESSION_SECURE_COOKIE=true.
+    secure-cookie: ${EIP_HUMAN_SESSION_SECURE_COOKIE:false}
