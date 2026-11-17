@@ -13,6 +13,7 @@ Esta pasta reúne a documentação de produto, domínio, arquitetura, dados, ope
 | `domain/` | Conceitos, entidades, relações e conhecimento de engenharia |
 | `architecture/` | Visão arquitetural, componentes, fluxos e decisões |
 | `backend/` | Diretrizes de implementação do backend |
+| `collectors/` | Coletores executáveis e seus contratos operacionais |
 | `analytics/` | Métricas, definições e regras de interpretação |
 | `iam/` | Identidade, autenticação e autorização |
 | `security/` | Segurança, privacidade e proteção dos dados |

@@ -82,6 +82,22 @@ public class IngestedEvidence {
         return eventId;
     }
 
+    public String getEventType() {
+        return eventType;
+    }
+
+    public Instant getOccurredAt() {
+        return occurredAt;
+    }
+
+    public JsonNode getAttributesJson() {
+        return attributesJson;
+    }
+
+    public String getRepositoryReference() {
+        return repositoryReference;
+    }
+
     public Instant getReceivedAt() {
         return receivedAt;
     }
