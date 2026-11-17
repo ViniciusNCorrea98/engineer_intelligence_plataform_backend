@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${EIP_DATABASE_URL}
-    username: ${EIP_DATABASE_USERNAME}
-    password: ${EIP_DATABASE_PASSWORD}
+    url: ${EIP_TEST_DATABASE_URL:${EIP_DATABASE_URL}}
+    username: ${EIP_TEST_DATABASE_USERNAME:${EIP_DATABASE_USERNAME}}
+    password: ${EIP_TEST_DATABASE_PASSWORD:${EIP_DATABASE_PASSWORD}}
   jpa:
     hibernate:
       ddl-auto: validate

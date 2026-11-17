@@ -14,8 +14,8 @@
 
 - [ ] Inventariar fontes e dados realmente disponíveis.
 - [ ] Validar quais metadados o Codex CLI e demais agentes expõem.
-- [ ] Definir envelope e schemas dos primeiros eventos.
-- [ ] Definir política de idempotência e retries.
+- [x] Definir e implementar o envelope inicial de eventos com schema `1.0` e validação na ingestão.
+- [x] Definir e implementar idempotência por identidade de serviço e chave, incluindo concorrência e replay.
 - [x] Definir e implementar correlação declarada, não canônica até confirmação ou rejeição.
 - [ ] Definir e implementar correlação inferida.
 - [ ] Definir estratégia de documentos e versionamento.

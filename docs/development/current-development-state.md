@@ -18,6 +18,8 @@ Human Identity and Administrative Authorization is now implemented on top of the
 
 ## PostgreSQL validation
 
-Docker Desktop is running and `eip-postgres-1` (PostgreSQL 16) is published on local port `5433`. The former `5432` route reached a different PostgreSQL authentication context, producing the misleading JDBC password failure. The EIP Compose mapping and default datasource now use `5433`, preserving the existing EIP database.
+Docker Desktop is running and `eip-postgres-1` (PostgreSQL 16) remains published on local port `5433` for development. Its database and volume are not used by integration tests.
 
-Flyway 10 also requires the PostgreSQL database-support module; it is now declared alongside `flyway-core`. `mvn test -Dspring.profiles.active=postgres` passes against PostgreSQL 16 with migrations V1, V2, and V3 validated. The next activity can build on the protected administration and validated ingestion baseline rather than reimplementing either authentication flow.
+`docker-compose.test.yml` defines a separate PostgreSQL 16 service on local port `55432`, with the dedicated `eip-integration-test-postgres-data` volume. The reproducible commands and test-only environment variables are documented in `docs/development/postgresql-integration-tests.md`.
+
+Flyway 10 requires the PostgreSQL database-support module alongside `flyway-core`. `mvn test '-Dspring.profiles.active=postgres'` passes against the isolated PostgreSQL service with migrations V1, V2, and V3 validated. The next activity can build on the protected administration and validated ingestion baseline rather than reimplementing either authentication flow.
